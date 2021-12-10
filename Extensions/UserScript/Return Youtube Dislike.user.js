@@ -198,7 +198,7 @@ function setState() {
   if (isMobile) {
     GM.xmlHttpRequest({
       method: "GET",
-      url: `https://youtube.com/watch?v=${getVideoId()}`,
+      url: `https://www.youtube.com/watch?v=${getVideoId()}`,
       headers: {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.3674"
       },
@@ -218,7 +218,7 @@ function setState() {
     });
   }
   else {
-    fetch(`https://youtube.com/watch?v=${getVideoId()}`).then((response) => {
+    fetch(`https://www.youtube.com/watch?v=${getVideoId()}`).then((response) => {
       response.text().then((text) => {
         let result = getDislikesFromYoutubeResponse(text);
         if (result) {
